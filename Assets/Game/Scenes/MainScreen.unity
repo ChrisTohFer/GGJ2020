@@ -127,7 +127,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17926
+  m_Name: pb_Mesh26958
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -313,7 +313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89ca60c0133cbd04584c39004ac67b6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartingMoney: 10000
+  StartingMoney: 99999
   MoneyChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1258,7 +1258,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17890
+  m_Name: pb_Mesh26920
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1669,6 +1669,7 @@ GameObject:
   - component: {fileID: 1775322566}
   - component: {fileID: 1775322565}
   - component: {fileID: 1775322564}
+  - component: {fileID: 1775322569}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -1910,6 +1911,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -0.28, z: 0}
+--- !u!114 &1775322569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775322563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39dfd9e9247b0f440a8a71b8d697266d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RadiansPerUnit: 10
 --- !u!1001 &1040969695027614414
 PrefabInstance:
   m_ObjectHideFlags: 0
