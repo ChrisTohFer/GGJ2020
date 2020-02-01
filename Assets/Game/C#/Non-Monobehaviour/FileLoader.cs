@@ -3,28 +3,46 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
-class GAME_IO_FUNCTIONS
+class GameIOFunctions
 {
-    public static string[] ReadFile(string path)
+    static void RandomizeArray<TYPE>(TYPE[] strings)
     {
-        Debug.Log(Directory.GetCurrentDirectory());
+        Random rng = new Random();
 
+        //Copied from stack overflow boo yah
+        int n = strings.Length;
+        while (n > 1)
+        {
+            n--;
+            int k = Random.Range(0, n + 1);
+            TYPE value = strings[k];
+            strings[k] = strings[n];
+            strings[n] = value;
+        }
+    }
+
+    public static string[] ReadFile(string path, bool randomize = true)
+    {
         if(!File.Exists(path))
         {
             Debug.Log("Could not find file at path: " + path);
-            return null;
+            return new string[0];
         }
 
-        return File.ReadAllLines(path);
+        string[] strings = File.ReadAllLines(path);
+        if (randomize)
+            RandomizeArray<string>(strings);
+
+        return strings;
     }
 
-    public static string[] ReadNounList()
+    public static string[] ReadNounList(bool randomize = true)
     {
-        return ReadFile("configs/NounList.txt");
+        return ReadFile("configs/NounList.txt", randomize);
     }
 
-    public static string[] ReadVerbList()
+    public static string[] ReadVerbList(bool randomize = true)
     {
-        return ReadFile("configs/VerbList.txt");
+        return ReadFile("configs/VerbList.txt", randomize);
     }
 }

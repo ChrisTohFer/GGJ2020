@@ -2,10 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-class LanguageAssociation<TYPE>
+public class LanguageAssociation<TYPE>
 {
+    //Member objects
     Dictionary<string, TYPE> alienToType;
     Dictionary<TYPE, string> typeToAlien;
+
+    //Properties
+    public int size
+    {
+        get { return alienToType.Count; }
+    }
 
     public LanguageAssociation(Dictionary<string, TYPE> att, Dictionary<TYPE, string> tta)
     {
@@ -13,6 +20,8 @@ class LanguageAssociation<TYPE>
         typeToAlien = tta;
     }
     
+    //Translation methods
+
     public TYPE TranslateFromAlien(string str)
     {
         return alienToType[str];
@@ -26,38 +35,21 @@ class LanguageAssociation<TYPE>
 
 class LanguageAssignment
 {
-    static void RandomizeStrings(string[] strings)
-    {
-        Random rng = new Random();
-
-        //Copied from stack overflow boo yah
-        int n = strings.Length;
-        while (n > 1)
-        {
-            n--;
-            int k = Random.Range(0, n + 1);
-            string value = strings[k];
-            strings[k] = strings[n];
-            strings[n] = value;
-        }
-    }
-
-    public static LanguageAssociation<TYPE> AssociateLanguage<TYPE>(string[] alien, TYPE[] objects)
+    //Function associates a list of alien words with a list of objects, with the option to begin partway through the word list
+    public static LanguageAssociation<TYPE> AssociateLanguage<TYPE>(string[] alien, TYPE[] objects, int readfrom = 0)
     {
         Dictionary<string, TYPE> alienToType = new Dictionary<string, TYPE>();
         Dictionary<TYPE, string> typeToAlien = new Dictionary<TYPE, string>();
-
-        RandomizeStrings(alien);
         
         for(int i = 0; i < objects.Length; ++i)
         {
             string word;
-            if (alien.Length > i)
+            if (alien.Length > i + readfrom)
             {
-                word = alien[i];
+                word = alien[i + readfrom];
             }
             else
-                word = "MISSING_WORD";
+                word = "MISSING_WORD" + i;
 
             alienToType.Add(word, objects[i]);
             typeToAlien.Add(objects[i], word);
