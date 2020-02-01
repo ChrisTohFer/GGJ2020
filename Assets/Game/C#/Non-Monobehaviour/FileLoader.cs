@@ -5,22 +5,6 @@ using UnityEngine;
 
 class GameIOFunctions
 {
-    static void RandomizeArray<TYPE>(TYPE[] strings)
-    {
-        Random rng = new Random();
-
-        //Copied from stack overflow boo yah
-        int n = strings.Length;
-        while (n > 1)
-        {
-            n--;
-            int k = Random.Range(0, n + 1);
-            TYPE value = strings[k];
-            strings[k] = strings[n];
-            strings[n] = value;
-        }
-    }
-
     public static string[] ReadFile(string path, bool randomize = true)
     {
         if(!File.Exists(path))
@@ -31,7 +15,7 @@ class GameIOFunctions
 
         string[] strings = File.ReadAllLines(path);
         if (randomize)
-            RandomizeArray<string>(strings);
+            Utils.RandomizeArray<string>(strings);
 
         return strings;
     }
