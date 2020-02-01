@@ -6,26 +6,25 @@ public class LanguageManager : MonoBehaviour
 {
     public static LanguageManager Singleton;
 
+    //Arrays of english terms
+    [SerializeField] string[] socketNames;
+    [SerializeField] string[] componentNames;
+    [SerializeField] string[] toolNames;
+
     //Language dictionaries
+    public LanguageAssociation<string> sockets;
+    public LanguageAssociation<string> components;
     public LanguageAssociation<string> tools;
-    public LanguageAssociation<string> actions;
 
     void Awake()
     {
         Singleton = this;
 
-        string[] toolstrings = { "hammer", "screwdriver", "wrench", "spanner" };
-        string[] actionstrings = { "hit", "twist" };
         string[] nouns = GameIOFunctions.ReadNounList();
-        tools = LanguageAssignment.AssociateLanguage<string>(nouns, toolstrings);
-        actions = LanguageAssignment.AssociateLanguage<string>(nouns, actionstrings, tools.size);
 
-        Debug.Log(tools.TranslateToAlien("hammer"));
-        Debug.Log(tools.TranslateToAlien("screwdriver"));
-        Debug.Log(tools.TranslateToAlien("wrench"));
-        Debug.Log(tools.TranslateToAlien("spanner"));
-        Debug.Log(actions.TranslateToAlien("hit"));
-        Debug.Log(actions.TranslateToAlien("twist"));
+        sockets = LanguageAssignment.AssociateLanguage<string>(nouns, socketNames);
+        components = LanguageAssignment.AssociateLanguage<string>(nouns, componentNames, sockets.size);
+        tools = LanguageAssignment.AssociateLanguage<string>(nouns, toolNames, sockets.size + components.size);
     }
 
 }
