@@ -10,6 +10,8 @@ public class TextBoxController : MonoBehaviour
     //References
     [SerializeField] TextMeshProUGUI textbox;
     [SerializeField] Animator animator;
+    [SerializeField] string newtext;
+    [SerializeField] bool applynewtext;
 
     void Awake()
     {
@@ -60,5 +62,14 @@ public class TextBoxController : MonoBehaviour
         }
 
         ShowNewText(message);
+    }
+
+    void Update()
+    {
+        if(applynewtext)
+        {
+            applynewtext = false;
+            ChangeText(newtext);
+        }
     }
 }
