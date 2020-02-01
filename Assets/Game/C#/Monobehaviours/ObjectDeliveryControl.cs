@@ -9,7 +9,6 @@ public class ObjectDeliveryControl : MonoBehaviour
 
     //
     [SerializeField] Animator animator;
-    [SerializeField] Transform setHolder;
     GameObject currentSet;
 
     //
@@ -42,8 +41,7 @@ public class ObjectDeliveryControl : MonoBehaviour
 
     IEnumerator Receiving()
     {
-        //currentSet; // INSTANTIATE HERE
-
+        currentSet = RepairSetCreator.CreateRepairSet().gameObject;
 
         animator.SetBool("SendIt", false);
 

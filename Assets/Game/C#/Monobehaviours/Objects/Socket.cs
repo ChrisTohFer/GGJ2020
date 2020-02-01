@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Socket : MonoBehaviour
 {
+    public string SocketType;
     string correctComponent;
 
     public string CorrectComponent

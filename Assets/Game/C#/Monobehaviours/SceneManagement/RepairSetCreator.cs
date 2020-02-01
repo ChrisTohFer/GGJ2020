@@ -49,12 +49,19 @@ public class RepairSetCreator : MonoBehaviour
         int nSockets = socketsPerLevel[difficulty];
         Socket[] sockets = new Socket[nSockets];
         Utils.RandomizeArray<GameObject>(socketPrefabs);
+
+        string instructions = "";
+
         for (int i = 0; i < nSockets; ++i)
         {
             GameObject g = Instantiate(socketPrefabs[i]);
             sockets[i] = g.GetComponent<Socket>();
             sockets[i].CorrectComponent = components[i].componentType;
+
+            instructions += components[i].componentType + " -> " + sockets[i].SocketType + "\n";
         }
+
+        TextBoxController.ChangeText(instructions);
 
         //Attach sockets
         repairableObject.AddRandomSockets(sockets);
