@@ -20,9 +20,9 @@ public class MoneyManager : MonoBehaviour
     public IntIntEvent MoneyChanged;
 
     //
-    int Amount
+    public static int Amount
     {
-        get { return currentMoney; }
+        get { return Singleton.currentMoney; }
     }
 
     void Awake()
@@ -33,18 +33,21 @@ public class MoneyManager : MonoBehaviour
     }
 
     //Increase money and return new amount
-    public static int Increase(int amount)
+    public static void Increase(int amount)
     {
         Singleton.currentMoney += amount;
         Singleton.MoneyChanged.Invoke(amount, Singleton.currentMoney);
-        return Singleton.currentMoney;
     }
 
-    //Decrease money and return new amount
-    public static int Decrease(int amount)
+    //Decrease money and return new amount, returns false if money is not available
+    public static bool Decrease(int amount)
     {
-        Singleton.currentMoney -= amount;
-        Singleton.MoneyChanged.Invoke(-amount, Singleton.currentMoney);
-        return Singleton.currentMoney;
+        if (amount <= Singleton.currentMoney)
+        {
+            Singleton.currentMoney -= amount;
+            Singleton.MoneyChanged.Invoke(-amount, Singleton.currentMoney);
+            return true;
+        }
+        return false;
     }
 }

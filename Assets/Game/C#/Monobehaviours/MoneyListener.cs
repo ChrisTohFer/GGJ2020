@@ -17,16 +17,21 @@ public class MoneyListener : MonoBehaviour
     void Start()
     {
         MoneyManager.Singleton.MoneyChanged.AddListener(OnMoneyChanged);
+        UpdateCurrencyDisplay(MoneyManager.Amount);
     }
     void OnDisable()
     {
         MoneyManager.Singleton.MoneyChanged.RemoveListener(OnMoneyChanged);
     }
 
+    void UpdateCurrencyDisplay(int amount)
+    {
+        moneyDisplay.text = amount.ToString() + currencyIcon;
+    }
+
     void OnMoneyChanged(int change, int newAmount)
     {
-        //update currency display
-        moneyDisplay.text = newAmount.ToString() + currencyIcon;
+        UpdateCurrencyDisplay(newAmount);
 
         //display money change
         GameObject go = Instantiate(textPrefab, transform.parent);
