@@ -73,7 +73,17 @@ public class RepairSet : MonoBehaviour
         {
             MoneyListener.DisplayPerfect();
             value *= 2;
+            AudioManager.PlaySendPerfect();
         }
+        else if(emptySockets == sockets.Length)
+        {
+            AudioManager.PlaySendDidNothing();
+        }
+        else
+        {
+            AudioManager.PlaySendYouTried();
+        }
+
         MoneyManager.Increase(value);
     }
 

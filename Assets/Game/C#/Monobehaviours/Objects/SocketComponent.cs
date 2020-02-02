@@ -32,6 +32,7 @@ public class SocketComponent : MonoBehaviour
                     transform.SetParent(hit.transform);
                     transform.localPosition = Vector3.zero;
                     pickedup = false;
+                    AudioManager.PlayAttach();
                 }
                 else
                 {
@@ -57,5 +58,6 @@ public class SocketComponent : MonoBehaviour
         originalPosition = transform.localPosition;
         collider.enabled = false;
         pickedup = true;
+        AudioManager.PlayPickup();
     }
 }

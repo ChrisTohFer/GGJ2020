@@ -18,6 +18,9 @@ public class KeyboardListener : MonoBehaviour
             HelpUI.SetActive(!HelpUI.activeSelf);
         }
         if (Input.GetKeyDown(KeyCode.M))
+        {
             mpressed.Invoke();
+            AudioManager.PlayMoneyIncome();
+        }
     }
 }
