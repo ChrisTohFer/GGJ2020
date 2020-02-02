@@ -46,7 +46,7 @@ public class ObjectDeliveryControl : MonoBehaviour
         animator.SetBool("SendIt", false);
 
         //Wait for object to fully arrive before sending event
-        while (!animator.GetCurrentAnimatorStateInfo(0).IsName("Sent"))
+        while (!animator.GetCurrentAnimatorStateInfo(0).IsName("Wait"))
         {
             yield return new WaitForEndOfFrame();
         }
