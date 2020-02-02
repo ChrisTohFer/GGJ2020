@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 1
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 24e37d9b5c3e0be4fab3e1defb323693, type: 2}
   m_HaloStrength: 0.5
@@ -300,7 +300,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2012
+  m_Name: pb_Mesh-1538
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1159,7 +1159,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -2412,17 +2412,17 @@ PrefabInstance:
     - target: {fileID: 1669007353827052915, guid: 54a7f413d451e504f9e172229e71629c,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.071428575
+      value: 0.2857143
       objectReference: {fileID: 0}
     - target: {fileID: 1669007353827052915, guid: 54a7f413d451e504f9e172229e71629c,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 4
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 1669007353827052915, guid: 54a7f413d451e504f9e172229e71629c,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.071428575
+      value: 0.2857143
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54a7f413d451e504f9e172229e71629c, type: 3}
