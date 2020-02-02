@@ -45,4 +45,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingValue: 5
   lowIncrease: 10
-  highIncrease: 40
+  highIncrease: 50
+  perfectMultiplier: 5

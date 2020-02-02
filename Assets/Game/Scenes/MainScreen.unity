@@ -199,11 +199,11 @@ MonoBehaviour:
 
     Left Click to rotate and drag objects
 
-    Use your
-    wits to translate the alien instructions
+    Buy books
+    to translate the alien instructions
 
-    Send it and earn money based on
-    how well you have repaired'
+    Send it and earn money based on how
+    well you have repaired'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1600d533f64d155418757f3c49734094, type: 2}
   m_sharedMaterial: {fileID: 6540854847468813803, guid: 1600d533f64d155418757f3c49734094,
@@ -498,7 +498,7 @@ MonoBehaviour:
   - {fileID: 4648463100770934283, guid: f54df4945bc491642a0d3e57b952ab2b, type: 3}
   - {fileID: 401886752959190286, guid: f5d1b45100c6d804a9d40068c5a7c149, type: 3}
   componentsPerLevel: 02000000030000000300000003000000
-  socketsPerLevel: 01000000010000000200000003000000
+  socketsPerLevel: 01000000020000000300000003000000
   componentRadius: 1.3
 --- !u!114 &901222102
 MonoBehaviour:
@@ -1317,6 +1317,11 @@ PrefabInstance:
       propertyPath: Purchase.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1680989035336569587, guid: a8e12e00eeed82d41a13626761752f6c,
+        type: 3}
+      propertyPath: cost
+      value: 2500
+      objectReference: {fileID: 0}
     - target: {fileID: 1824133026088022406, guid: a8e12e00eeed82d41a13626761752f6c,
         type: 3}
       propertyPath: m_RootOrder
@@ -1452,6 +1457,11 @@ PrefabInstance:
       propertyPath: Purchase.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2505144955629696162, guid: a8e12e00eeed82d41a13626761752f6c,
+        type: 3}
+      propertyPath: cost
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 2790842382156371291, guid: a8e12e00eeed82d41a13626761752f6c,
         type: 3}
       propertyPath: m_Material
@@ -1546,6 +1556,11 @@ PrefabInstance:
         type: 3}
       propertyPath: Purchase.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2997398814077015813, guid: a8e12e00eeed82d41a13626761752f6c,
+        type: 3}
+      propertyPath: cost
+      value: 5000
       objectReference: {fileID: 0}
     - target: {fileID: 3492067372352348908, guid: a8e12e00eeed82d41a13626761752f6c,
         type: 3}
@@ -1670,27 +1685,32 @@ PrefabInstance:
     - target: {fileID: 5682974386716572024, guid: a8e12e00eeed82d41a13626761752f6c,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5682974386716572024, guid: a8e12e00eeed82d41a13626761752f6c,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5682974386716572024, guid: a8e12e00eeed82d41a13626761752f6c,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5682974386716572024, guid: a8e12e00eeed82d41a13626761752f6c,
         type: 3}
       propertyPath: m_textInfo.pageCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5682974386716572024, guid: a8e12e00eeed82d41a13626761752f6c,
         type: 3}
       propertyPath: m_textInfo.materialCount
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682974386716572024, guid: a8e12e00eeed82d41a13626761752f6c,
+        type: 3}
+      propertyPath: m_text
+      value: "5000\xAC"
       objectReference: {fileID: 0}
     - target: {fileID: 5744793157735707409, guid: a8e12e00eeed82d41a13626761752f6c,
         type: 3}
@@ -2021,12 +2041,12 @@ PrefabInstance:
     - target: {fileID: 5860858319747548565, guid: a8e12e00eeed82d41a13626761752f6c,
         type: 3}
       propertyPath: m_text
-      value: "500\xAC"
+      value: "1000\xAC"
       objectReference: {fileID: 0}
     - target: {fileID: 5860858319747548565, guid: a8e12e00eeed82d41a13626761752f6c,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5860858319747548565, guid: a8e12e00eeed82d41a13626761752f6c,
         type: 3}
@@ -2106,27 +2126,32 @@ PrefabInstance:
     - target: {fileID: 7041558617247343506, guid: a8e12e00eeed82d41a13626761752f6c,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7041558617247343506, guid: a8e12e00eeed82d41a13626761752f6c,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7041558617247343506, guid: a8e12e00eeed82d41a13626761752f6c,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7041558617247343506, guid: a8e12e00eeed82d41a13626761752f6c,
         type: 3}
       propertyPath: m_textInfo.pageCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7041558617247343506, guid: a8e12e00eeed82d41a13626761752f6c,
         type: 3}
       propertyPath: m_textInfo.materialCount
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041558617247343506, guid: a8e12e00eeed82d41a13626761752f6c,
+        type: 3}
+      propertyPath: m_text
+      value: "2500\xAC"
       objectReference: {fileID: 0}
     - target: {fileID: 7117104103686406656, guid: a8e12e00eeed82d41a13626761752f6c,
         type: 3}
@@ -2366,7 +2391,7 @@ PrefabInstance:
     - target: {fileID: 9067553204547380055, guid: a8e12e00eeed82d41a13626761752f6c,
         type: 3}
       propertyPath: m_fontSize
-      value: 30.8
+      value: 33.15
       objectReference: {fileID: 0}
     - target: {fileID: 9067553204547380055, guid: a8e12e00eeed82d41a13626761752f6c,
         type: 3}
@@ -2375,8 +2400,8 @@ PrefabInstance:
 
         Left Click to rotate and drag objects
 
-        Use
-        your wits to translate the alien instructions
+        Buy
+        books to translate the alien instructions
 
         Send it and earn money
         based on how well you have repaired'
@@ -2384,17 +2409,17 @@ PrefabInstance:
     - target: {fileID: 9067553204547380055, guid: a8e12e00eeed82d41a13626761752f6c,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 159
+      value: 155
       objectReference: {fileID: 0}
     - target: {fileID: 9067553204547380055, guid: a8e12e00eeed82d41a13626761752f6c,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 29
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 9067553204547380055, guid: a8e12e00eeed82d41a13626761752f6c,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 30
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 9067553204547380055, guid: a8e12e00eeed82d41a13626761752f6c,
         type: 3}
