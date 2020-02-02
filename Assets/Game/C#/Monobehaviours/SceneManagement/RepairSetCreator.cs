@@ -14,7 +14,7 @@ public class RepairSetCreator : MonoBehaviour
     [SerializeField] GameObject[] socketPrefabs;
     [SerializeField] int[] componentsPerLevel;
     [SerializeField] int[] socketsPerLevel;
-    [SerializeField] float componentRadius = 100f;
+    [SerializeField] float componentRadius = 2f;
 
     void Awake()
     {
@@ -30,7 +30,7 @@ public class RepairSetCreator : MonoBehaviour
         int difficulty = DifficultyManager.Singleton.Difficulty;
 
         //Instantiate repairset
-        GameObject rsObject = Instantiate(repairSetPrefab);
+        GameObject rsObject = Instantiate(repairSetPrefab, repairSetHolder);
         RepairSet repairSet = rsObject.GetComponent<RepairSet>();
 
         //Instantiate repairable object
@@ -40,26 +40,26 @@ public class RepairSetCreator : MonoBehaviour
         //Instantiate components
         int nComponents = componentsPerLevel[difficulty];
         SocketComponent[] components = new SocketComponent[nComponents];
-        Utils.RandomizeArray<GameObject>(componentPrefabs);
+        GameObject[] prefabSelection = Utils.RandomSelection<GameObject>(componentPrefabs, nComponents);
         for(int i = 0; i < nComponents; ++i)
         {
-            GameObject g = Instantiate(componentPrefabs[i], rsObject.transform);
+            GameObject g = Instantiate(prefabSelection[i], rsObject.transform);
             components[i] = g.GetComponent<SocketComponent>();
 
             //Place components in a circle around the repairable
-            g.transform.localPosition = Quaternion.Euler(0f, 2f * Mathf.PI * i / nComponents, 0f) * (Vector3.left * componentRadius);
+            g.transform.localPosition = Quaternion.Euler(0f, 360 * i / nComponents, 0f) * (Vector3.left * componentRadius);
         }
 
         //Instantiate sockets
         int nSockets = socketsPerLevel[difficulty];
         Socket[] sockets = new Socket[nSockets];
-        Utils.RandomizeArray<GameObject>(socketPrefabs);
+        prefabSelection = Utils.RandomSelection<GameObject>(socketPrefabs, nSockets);
 
         string instructions = "";
 
         for (int i = 0; i < nSockets; ++i)
         {
-            GameObject g = Instantiate(socketPrefabs[i]);
+            GameObject g = Instantiate(prefabSelection[i]);
             sockets[i] = g.GetComponent<Socket>();
             sockets[i].CorrectComponent = components[i].componentType;
 
