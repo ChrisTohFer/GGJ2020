@@ -7,6 +7,7 @@ public class RepairSet : MonoBehaviour
     [SerializeField] int startingValue = 5;
     [SerializeField] int lowIncrease = 10;
     [SerializeField] int highIncrease = 40;
+    [SerializeField] int perfectMultiplier = 2;
     int value = 0;
 
     RepairableObject repairable;
@@ -72,7 +73,7 @@ public class RepairSet : MonoBehaviour
         if(emptySockets == 0 && wrongSockets == 0)
         {
             MoneyListener.DisplayPerfect();
-            value *= 2;
+            value *= perfectMultiplier;
             AudioManager.PlaySendPerfect();
         }
         else if(emptySockets == sockets.Length)

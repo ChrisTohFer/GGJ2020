@@ -624,12 +624,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1669007353102558624}
   m_PrefabAsset: {fileID: 0}
---- !u!82 &1067895091 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 2587271876356576491, guid: daaf918f68f4beb4abc575f5b4aae25e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1283051659}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1171812140 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5860858319747548563, guid: a8e12e00eeed82d41a13626761752f6c,
@@ -2410,7 +2404,7 @@ PrefabInstance:
     - target: {fileID: 9067553204559546834, guid: a8e12e00eeed82d41a13626761752f6c,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9067553204559546834, guid: a8e12e00eeed82d41a13626761752f6c,
         type: 3}
@@ -2440,7 +2434,7 @@ PrefabInstance:
     - target: {fileID: 9067553204559546834, guid: a8e12e00eeed82d41a13626761752f6c,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9067553204559546834, guid: a8e12e00eeed82d41a13626761752f6c,
         type: 3}
@@ -2451,11 +2445,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1067895091}
+      objectReference: {fileID: 1905389338}
     - target: {fileID: 9067553204559546834, guid: a8e12e00eeed82d41a13626761752f6c,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Play
+      value: set_text
       objectReference: {fileID: 0}
     - target: {fileID: 9067553204559546834, guid: a8e12e00eeed82d41a13626761752f6c,
         type: 3}
@@ -2490,6 +2484,11 @@ PrefabInstance:
     - target: {fileID: 9067553204559546834, guid: a8e12e00eeed82d41a13626761752f6c,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: SEND IT
+      objectReference: {fileID: 0}
+    - target: {fileID: 9067553204559546834, guid: a8e12e00eeed82d41a13626761752f6c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
       value: SEND IT
       objectReference: {fileID: 0}
     - target: {fileID: 9067553204559546835, guid: a8e12e00eeed82d41a13626761752f6c,
