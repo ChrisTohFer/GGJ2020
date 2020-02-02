@@ -5,7 +5,7 @@ using UnityEngine;
 public class Twirling : MonoBehaviour
 {
     [SerializeField] Vector3 initialRotation;   //0 to 2pi, incremented each frame depending on period
-    [SerializeField] Vector3 rotationPeriod;
+    [SerializeField] Vector3 rotationPeriod = new Vector3(1,1,1);
     [SerializeField] Vector3 rotationScale;
 
     void Update()

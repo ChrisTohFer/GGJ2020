@@ -16,6 +16,11 @@ public class RepairSetCreator : MonoBehaviour
     [SerializeField] int[] socketsPerLevel;
     [SerializeField] float componentRadius = 100f;
 
+    void Awake()
+    {
+        Singleton = this;
+    }
+
     public static RepairSet CreateRepairSet()
     {
         return Singleton.CreateRepairSetLocal();

@@ -30,7 +30,7 @@ public class ObjectDeliveryControl : MonoBehaviour
     IEnumerator Sending()
     {
         //Wait for object to be fully sent before destroying
-        while(!animator.GetCurrentAnimatorStateInfo(0).IsName("Sent"))
+        while(!animator.GetCurrentAnimatorStateInfo(0).IsTag("Sent"))
         {
             yield return new WaitForEndOfFrame();
         }
@@ -46,7 +46,7 @@ public class ObjectDeliveryControl : MonoBehaviour
         animator.SetBool("SendIt", false);
 
         //Wait for object to fully arrive before sending event
-        while (!animator.GetCurrentAnimatorStateInfo(0).IsName("Wait"))
+        while (!animator.GetCurrentAnimatorStateInfo(0).IsTag("Wait"))
         {
             yield return new WaitForEndOfFrame();
         }
