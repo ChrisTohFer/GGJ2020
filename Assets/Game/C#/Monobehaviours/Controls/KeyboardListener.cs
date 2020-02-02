@@ -22,5 +22,9 @@ public class KeyboardListener : MonoBehaviour
             mpressed.Invoke();
             AudioManager.PlayMoneyIncome();
         }
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 }
