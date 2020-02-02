@@ -106,4 +106,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91afebc5b96ab90449e52ec75c3ad99a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SocketType: 
+  SocketType: Sphere

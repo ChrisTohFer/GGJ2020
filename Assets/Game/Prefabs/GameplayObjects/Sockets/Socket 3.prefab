@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 539633179379729318}
   - component: {fileID: 3106562767766862056}
   - component: {fileID: 5599325168770492294}
-  - component: {fileID: 3506798656787511995}
   m_Layer: 0
   m_Name: Socket 3
   m_TagString: Untagged
@@ -108,17 +107,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91afebc5b96ab90449e52ec75c3ad99a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SocketType: 
---- !u!114 &3506798656787511995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 401886752959190286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91afebc5b96ab90449e52ec75c3ad99a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SocketType: 
+  SocketType: Cylinder

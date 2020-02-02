@@ -607,8 +607,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78470d2d90097154eb2303a2f13ae7d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  socketNames: []
-  componentNames: []
+  socketNames:
+  - Cube
+  - Sphere
+  - Cylinder
+  componentNames:
+  - Cube
+  - Sphere
+  - Capsule
   toolNames: []
 --- !u!114 &901222101
 MonoBehaviour:

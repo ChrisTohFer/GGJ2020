@@ -63,7 +63,9 @@ public class RepairSetCreator : MonoBehaviour
             sockets[i] = g.GetComponent<Socket>();
             sockets[i].CorrectComponent = components[i].componentType;
 
-            instructions += components[i].componentType + " -> " + sockets[i].SocketType + "\n";
+            string ComponentString = LanguageManager.Singleton.components.TranslateToAlien(components[i].componentType);
+            string SocketString = LanguageManager.Singleton.sockets.TranslateToAlien(sockets[i].SocketType);
+            instructions += ComponentString + " -> " + SocketString + "\n";
         }
 
         TextBoxController.ChangeText(instructions);
