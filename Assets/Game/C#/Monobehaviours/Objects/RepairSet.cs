@@ -41,13 +41,19 @@ public class RepairSet : MonoBehaviour
     }
     void AddValue()
     {
+        int emptySockets = 0;
+        int wrongSockets = 0;
+
         foreach(Socket s in sockets)
         {
             if (s.transform.childCount == 0)
+            {
+                ++emptySockets;
                 continue;
+            }
 
             //Check component has been slotted in
-            SocketComponent component = transform.GetChild(0).GetComponent<SocketComponent>();
+            SocketComponent component = s.transform.GetChild(0).GetComponent<SocketComponent>();
             
             if (component != null)
             {
@@ -58,10 +64,15 @@ public class RepairSet : MonoBehaviour
                 else
                 {
                     IncreaseValueLow();
+                    ++wrongSockets;
                 }
             }
         }
 
+        if(emptySockets == 0 && wrongSockets == 0)
+        {
+            MoneyListener.DisplayPerfect();
+        }
         MoneyManager.Increase(value);
     }
 
