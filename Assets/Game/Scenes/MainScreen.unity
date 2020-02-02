@@ -624,6 +624,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1669007353102558624}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1122140144 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9067553204559546832, guid: a8e12e00eeed82d41a13626761752f6c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1040969695027614414}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1171812140 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5860858319747548563, guid: a8e12e00eeed82d41a13626761752f6c,
@@ -1322,6 +1328,11 @@ PrefabInstance:
       propertyPath: cost
       value: 2500
       objectReference: {fileID: 0}
+    - target: {fileID: 1680989035336569587, guid: a8e12e00eeed82d41a13626761752f6c,
+        type: 3}
+      propertyPath: SendItButton
+      value: 
+      objectReference: {fileID: 1122140144}
     - target: {fileID: 1824133026088022406, guid: a8e12e00eeed82d41a13626761752f6c,
         type: 3}
       propertyPath: m_RootOrder
@@ -1462,6 +1473,11 @@ PrefabInstance:
       propertyPath: cost
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 2505144955629696162, guid: a8e12e00eeed82d41a13626761752f6c,
+        type: 3}
+      propertyPath: SendItButton
+      value: 
+      objectReference: {fileID: 1122140144}
     - target: {fileID: 2790842382156371291, guid: a8e12e00eeed82d41a13626761752f6c,
         type: 3}
       propertyPath: m_Material
@@ -1562,6 +1578,11 @@ PrefabInstance:
       propertyPath: cost
       value: 5000
       objectReference: {fileID: 0}
+    - target: {fileID: 2997398814077015813, guid: a8e12e00eeed82d41a13626761752f6c,
+        type: 3}
+      propertyPath: SendItButton
+      value: 
+      objectReference: {fileID: 1122140144}
     - target: {fileID: 3492067372352348908, guid: a8e12e00eeed82d41a13626761752f6c,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -2584,7 +2605,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1040969695027614414}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1122140144}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
