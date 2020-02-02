@@ -50,7 +50,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3109e4ffbb1ae4d4a997d865aceca269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  socketLocations: []
+  socketLocations:
+  - {fileID: 5803852896549738203}
+  - {fileID: 4408465096182378648}
+  - {fileID: 7735371186400489825}
+  - {fileID: 8579402446472406251}
+  - {fileID: 4743670455870011597}
+  - {fileID: 4785582545882474152}
 --- !u!1 &688461612900039055
 GameObject:
   m_ObjectHideFlags: 0
