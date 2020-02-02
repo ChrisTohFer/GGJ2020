@@ -72,6 +72,7 @@ public class RepairSet : MonoBehaviour
         if(emptySockets == 0 && wrongSockets == 0)
         {
             MoneyListener.DisplayPerfect();
+            value *= 2;
         }
         MoneyManager.Increase(value);
     }

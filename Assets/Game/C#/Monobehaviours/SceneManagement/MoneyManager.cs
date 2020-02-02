@@ -39,6 +39,11 @@ public class MoneyManager : MonoBehaviour
         Singleton.MoneyChanged.Invoke(amount, Singleton.currentMoney);
     }
 
+    public void IncreaseLocal(int amount)
+    {
+        Increase(amount);
+    }
+
     //Decrease money and return new amount, returns false if money is not available
     public static bool Decrease(int amount)
     {
