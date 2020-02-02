@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5168862367044332260}
   - component: {fileID: 2646769927834062887}
   - component: {fileID: -6275384995293604288}
+  - component: {fileID: 1272219099992746374}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -107,3 +108,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   componentType: Sphere
+--- !u!114 &1272219099992746374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858868260326036928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb005475cb95ab64e8cb6fd3075153a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialRotation: {x: 0.4, y: 0.8, z: 0}
+  rotationPeriod: {x: 6, y: 6, z: 6}
+  rotationScale: {x: 0.3, y: 0.3, z: 0.3}

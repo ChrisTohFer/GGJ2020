@@ -28,7 +28,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4511789389413843718}
+  - {fileID: 6121994360140187470}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -81,6 +81,53 @@ Transform:
   m_Father: {fileID: 4511789389413843718}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &980958519589022610
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6121994360140187470}
+  - component: {fileID: 5572301514990715794}
+  m_Layer: 0
+  m_Name: Twirler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6121994360140187470
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980958519589022610}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4511789389413843718}
+  m_Father: {fileID: 1451954204107687171}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5572301514990715794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980958519589022610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb005475cb95ab64e8cb6fd3075153a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialRotation: {x: 0, y: 0.4, z: 0}
+  rotationPeriod: {x: 10, y: 10, z: 10}
+  rotationScale: {x: 0.1, y: 0.1, z: 0}
 --- !u!1 &1830219634553939056
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,7 +225,7 @@ Transform:
   - {fileID: 2302458990177161595}
   - {fileID: 2453287177318506367}
   - {fileID: 2263034791935074899}
-  m_Father: {fileID: 1451954204107687171}
+  m_Father: {fileID: 6121994360140187470}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3752967398057898747
@@ -254,6 +301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RadiansPerUnit: 10
+  OptionalOtherTransform: {fileID: 1451954204107687171}
 --- !u!1 &6694993132889383861
 GameObject:
   m_ObjectHideFlags: 0

@@ -47,7 +47,7 @@ public class RepairSetCreator : MonoBehaviour
             components[i] = g.GetComponent<SocketComponent>();
 
             //Place components in a circle around the repairable
-            g.transform.localPosition = Quaternion.Euler(0f, 360 * i / nComponents, 0f) * (Vector3.left * componentRadius);
+            g.transform.localPosition = Quaternion.Euler(0f, 360 * i / nComponents, 0f) * (Vector3.left * componentRadius) + Vector3.up * .3f;
         }
 
         //Instantiate sockets

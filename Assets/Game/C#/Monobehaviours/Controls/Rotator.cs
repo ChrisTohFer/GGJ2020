@@ -6,6 +6,7 @@ public class Rotator : MonoBehaviour
 {
     //
     [SerializeField] float RadiansPerUnit = 1f;
+    [SerializeField] Transform OptionalOtherTransform;
 
     //
     bool Rotating = false;
@@ -18,9 +19,10 @@ public class Rotator : MonoBehaviour
         }
         if(Rotating)
         {
-            transform.eulerAngles = new Vector3(transform.eulerAngles.x
-                                            , transform.eulerAngles.y - RadiansPerUnit * Input.GetAxis("Mouse X")
-                                            , transform.eulerAngles.z);
+            Transform t = (OptionalOtherTransform == null) ? transform : OptionalOtherTransform;
+            t.localEulerAngles = new Vector3(t.localEulerAngles.x
+                                            , t.localEulerAngles.y - RadiansPerUnit * Input.GetAxis("Mouse X")
+                                            , t.localEulerAngles.z);
         }
     }
 
