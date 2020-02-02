@@ -7,6 +7,7 @@ public class LanguageAssociation<TYPE>
     //Member objects
     Dictionary<string, TYPE> alienToType;
     Dictionary<TYPE, string> typeToAlien;
+    string[] alienWords;
 
     //Properties
     public int size
@@ -14,10 +15,11 @@ public class LanguageAssociation<TYPE>
         get { return alienToType.Count; }
     }
 
-    public LanguageAssociation(Dictionary<string, TYPE> att, Dictionary<TYPE, string> tta)
+    public LanguageAssociation(Dictionary<string, TYPE> att, Dictionary<TYPE, string> tta, string[] words)
     {
         alienToType = att;
         typeToAlien = tta;
+        alienWords = words;
     }
     
     //Translation methods
@@ -31,6 +33,15 @@ public class LanguageAssociation<TYPE>
         return typeToAlien[t];
     }
 
+    public string GetAlienByIndex(int i)
+    {
+        return alienWords[i];
+    }
+    public TYPE GetTypeByIndex(int i)
+    {
+        return TranslateFromAlien(alienWords[i]);
+    }
+
 }
 
 class LanguageAssignment
@@ -40,7 +51,8 @@ class LanguageAssignment
     {
         Dictionary<string, TYPE> alienToType = new Dictionary<string, TYPE>();
         Dictionary<TYPE, string> typeToAlien = new Dictionary<TYPE, string>();
-        
+        string[] alienwords = new string[objects.Length];
+
         for(int i = 0; i < objects.Length; ++i)
         {
             string word;
@@ -51,10 +63,11 @@ class LanguageAssignment
             else
                 word = "MISSING_WORD" + i;
 
+            alienwords[i] = word;
             alienToType.Add(word, objects[i]);
             typeToAlien.Add(objects[i], word);
         }
 
-        return new LanguageAssociation<TYPE>(alienToType, typeToAlien);
+        return new LanguageAssociation<TYPE>(alienToType, typeToAlien, alienwords);
     }
 }

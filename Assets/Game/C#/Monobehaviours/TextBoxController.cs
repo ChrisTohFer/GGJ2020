@@ -13,6 +13,8 @@ public class TextBoxController : MonoBehaviour
     [SerializeField] string newtext;
     [SerializeField] bool applynewtext;
 
+    string MainText = "";
+
     void Awake()
     {
         Singleton = this;
@@ -29,11 +31,14 @@ public class TextBoxController : MonoBehaviour
         Singleton.animator.SetBool("Shown", true);
     }
     //Move textbox offscreen and bring back with new text
-    public static void ChangeText(string message)
+    public static void ChangeText(string message, bool maintext = true)
     {
         var stateinfo = Singleton.animator.GetCurrentAnimatorStateInfo(0);
-        
-        if(stateinfo.IsName("OffScreen"))
+
+        if (maintext)
+            Singleton.MainText = message;
+
+        if (stateinfo.IsName("OffScreen"))
         {
             ShowNewText(message);
         }
@@ -44,6 +49,13 @@ public class TextBoxController : MonoBehaviour
             Singleton.StartCoroutine(Singleton.WaitForTextToLeaveScreen(message));
         }
     }
+
+    //Returns main text to box, in case of alternate text being shown
+    public static void ReturnMainText()
+    {
+        ChangeText(Singleton.MainText);
+    }
+
     //Change text and bring textbox back onto screen
     public static void ShowNewText(string message)
     {

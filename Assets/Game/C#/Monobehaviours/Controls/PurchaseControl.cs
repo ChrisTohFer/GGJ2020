@@ -9,6 +9,10 @@ public class PurchaseControl : MonoBehaviour
     //
     public UnityEvent Purchase;
     [SerializeField] int cost;
+    [SerializeField] int id;
+
+    bool purchased = false;
+    bool bookOpen = false;
 
     //
     Button purchaseButton;
@@ -25,10 +29,29 @@ public class PurchaseControl : MonoBehaviour
 
     public void ButtonPressed()
     {
-        if(MoneyManager.Decrease(cost))
+        if(!purchased)
         {
-            Purchase.Invoke();
-            purchaseButton.interactable = false;
+            if (MoneyManager.Decrease(cost))
+            {
+                Purchase.Invoke();
+                purchased = true;
+            }
+        }
+        else
+        {
+            if(bookOpen)
+            {
+                TextBoxController.ReturnMainText();
+                bookOpen = false;
+            }
+            else
+            {
+                string componentString = LanguageManager.Singleton.components.GetAlienByIndex(id) + " = " + LanguageManager.Singleton.components.GetTypeByIndex(id) + " component";
+                string socketString = LanguageManager.Singleton.sockets.GetAlienByIndex(id) + " = " + LanguageManager.Singleton.sockets.GetTypeByIndex(id) + " socket";
+
+                TextBoxController.ChangeText(componentString + "\n" + socketString, false);
+                bookOpen = true;
+            }
         }
     }
 }
